@@ -1,0 +1,1 @@
+"C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe" LinuxBinaryTranslator.csproj /restore /p:Configuration=Debug /p:Platform=x64 /v:minimal

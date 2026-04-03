@@ -1,0 +1,9 @@
+<!--
+    Runtime Directives used by .NET Native. The default policy below matches
+    the standard UWP template and is a safe baseline for this app.
+-->
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+  <Application>
+    <Assembly Name="*Application*" Dynamic="Required All" />
+  </Application>
+</Directives>

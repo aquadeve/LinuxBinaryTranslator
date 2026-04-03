@@ -1,0 +1,115 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="LinuxBinaryTranslator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Black"
+                          >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- Title bar -->
+            <RowDefinition Height="Auto"/>
+            <!-- Terminal output area -->
+            <RowDefinition Height="*"/>
+            <!-- Input area -->
+            <RowDefinition Height="Auto"/>
+            <!-- Status bar -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title and controls -->
+        <Grid Grid.Row="0" Padding="16,8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       Text="Linux Binary Translator"
+                       FontSize="24"
+                       Foreground="White"
+                       VerticalAlignment="Center"/>
+            <StackPanel Grid.Column="1" Orientation="Horizontal">
+                <Button x:ConnectionId='8' x:Name="LoadButton"
+                        Content="Load ELF Binary"
+                                                
+                        Margin="0,0,8,0"/>
+                <Button x:ConnectionId='9' x:Name="BootRootfsButton"
+                        Content="Boot Rootfs"
+                                                      
+                        Margin="0,0,8,0"/>
+                <Button x:ConnectionId='10' x:Name="StopButton"
+                        Content="Stop"
+                                                
+                        IsEnabled="False"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Terminal output display -->
+        <ScrollViewer x:ConnectionId='2' x:Name="OutputScrollViewer"
+                      Grid.Row="1"
+                      Margin="8,0"
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Auto"
+                      Background="#FF1E1E1E">
+            <TextBlock x:ConnectionId='7' x:Name="OutputTextBlock"
+                       FontFamily="Consolas"
+                       FontSize="14"
+                       Foreground="#FFCCCCCC"
+                       IsTextSelectionEnabled="True"
+                       TextWrapping="Wrap"
+                       Padding="12"
+                       Text="Linux Binary Translator v2.0&#x0A;Ready. Load an ELF binary or boot a rootfs to begin.&#x0A;&#x0A;Xbox One Controls:&#x0A;  A Button  = Submit input&#x0A;  B Button  = Ctrl+C (interrupt)&#x0A;  X Button  = Load binary&#x0A;  Y Button  = Clear terminal&#x0A;  DPad      = Scroll output&#x0A;  LB/RB     = Tab / Backspace&#x0A;&#x0A;Rootfs: Place a Linux rootfs folder in app local storage&#x0A;  Supports: Ubuntu, Debian, Arch Linux, Alpine&#x0A;"/>
+        </ScrollViewer>
+
+        <!-- Input box -->
+        <Grid Grid.Row="2" Padding="8,4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"
+                       Text="$ "
+                       FontFamily="Consolas"
+                       FontSize="14"
+                       Foreground="#FF00FF00"
+                       VerticalAlignment="Center"
+                       Margin="8,0"/>
+            <TextBox x:ConnectionId='5' x:Name="InputBox"
+                     Grid.Column="1"
+                     FontFamily="Consolas"
+                     FontSize="14"
+                     Foreground="White"
+                     Background="#FF222222"
+                     PlaceholderText="Type input here..."
+                                               />
+            <Button x:ConnectionId='6' Grid.Column="2"
+                    Content="Send"
+                                            
+                    Margin="4,0,0,0"/>
+        </Grid>
+
+        <!-- Status bar -->
+        <Grid Grid.Row="3" Padding="12,4" Background="#FF333333">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:ConnectionId='3' x:Name="StatusText"
+                       Grid.Column="0"
+                       Text="Idle"
+                       FontSize="12"
+                       Foreground="#FF888888"
+                       VerticalAlignment="Center"/>
+            <TextBlock x:ConnectionId='4' x:Name="PerformanceText"
+                       Grid.Column="1"
+                       FontSize="12"
+                       Foreground="#FF888888"
+                       VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Page>
+

@@ -1,0 +1,1 @@
+C:\Users\KantzJr\Documents\GitHub\linux-tests\LinuxBinaryTranslator\AppPackages\LinuxBinaryTranslator_1.0.0.0_x64_Debug_Test\LinuxBinaryTranslator_1.0.0.0_x64_Debug.appx
