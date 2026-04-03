@@ -141,3 +141,11 @@ kernel source in the repository root:
 - `arch/x86/include/uapi/asm/prctl.h` — arch_prctl constants
 - `include/uapi/linux/stat.h` — stat structure layout
 - `include/uapi/asm-generic/fcntl.h` — file control flags
+
+- ## And most importantly this project is entirely vibe coded with Github Copilot
+- but it does use the linux kernel as reference and any errors it had when generated where now fixed aside from not being able too boot into a rootfs
+
+- ## TODO:
+-   1.Implement Networking
+-   2. fix the rootfs booting
+    3. compatibility list
