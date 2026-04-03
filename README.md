@@ -146,6 +146,6 @@ kernel source in the repository root:
 - but it does use the linux kernel as reference and any errors it had when generated where now fixed aside from not being able too boot into a rootfs
 
 - ## TODO:
--   1.Implement Networking
--   2. fix the rootfs booting
-    3. compatibility list
+   1.Implement Networking
+   2. fix the rootfs booting
+   3. compatibility list
